@@ -58,7 +58,7 @@ trap "cleanup" EXIT
 BASE_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 if ! which rbenv &>/dev/null; then
-  abort "Error: you need to 'brew install rbenv'!"
+  abort "Error: you need to 'brew install rbenv rbenv-aliases'!"
 fi
 
 if ! rbenv version-name &>/dev/null; then
