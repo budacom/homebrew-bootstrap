@@ -67,7 +67,7 @@ if ! rbenv version-name &>/dev/null; then
   else
     RUBY_REQUESTED="$(rbenv local)"
   fi
-  RUBY_DEFINITION="$(ruby-build --definitions | grep "^$RUBY_REQUESTED$" || true)"
+  RUBY_DEFINITION="$(ruby-build --definitions | grep "^$RUBY_REQUESTED" | tail -n1 || true)"
 
   if [ -z "$RUBY_DEFINITION" ]; then
     RUBY_DEFINITION="$BASE_PATH/ruby-definitions/$RUBY_REQUESTED"
