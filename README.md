@@ -7,7 +7,7 @@ A series of helper scripts to reduce duplication across `script/bootstrap`s.
 ## Usage
 
 ```bash
-brew tap github/bootstrap
+brew tap budacom/bootstrap
 brew bootstrap-rbenv-ruby # or any other script
 ```
 
